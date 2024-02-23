@@ -1,0 +1,36 @@
+body{
+    font-family: "Inter", sans-serif;
+}
+
+#slider-1 {
+    position: relative;
+    background-image: url('assets/images/about/nairobi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slider-1 .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(123, 25, 25, 0.63)
+;
+}
+
+#slider-2 {
+    position: relative;
+    background-image: url('assets/images/about/coro4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#slider-2 .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
