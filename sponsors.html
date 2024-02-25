@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ruby Conf - 2024</title>
-    <link rel="stylesheet" href="index.css"/>
 
+    <meta charset="UTF-8">
+    <title> Ruby Conf Africa </title>
+    <link rel="icon" href="assets/images/logo/ruby.svg" type="image/x-icon">
+
+
+    <!-- add resource links below -->
+    <link rel="stylesheet" href="index.css"/>
     <script defer src="assets/js/alpine.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,18 +16,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
 
-<header
-        x-data="
-        {
-          navbarOpen: false,
-        }
-      "
-        class="absolute left-0 top-0 z-50 w-full"
->
-
+<header x-data="{navbarOpen: false,}" class="absolute left-0 top-0 z-50 w-full">
 
     <!-- ================== menu section  start ======================================================================-->
     <div class="container mx-auto">
@@ -113,11 +111,10 @@
     </div>
     <!-- ================== menu section end ======================================================================-->
 
-
 </header>
 
 
-<!-- ====== Hero Section Start -->
+<!-- ====================== Hero Section Start ======================================================================-->
 <div id="slider-1" class="relative pt-[120px] pb-[110px] lg:pt-[150px] min-h-screen">
     <div class="hero-overlay bg-opacity-60"></div>
     <div class="container mx-auto">
@@ -168,8 +165,8 @@
 </div>
 <!--Hero sectio ends here-->
 
-<!-- component -->
-<!-- Code block starts -->
+
+<!-- ================= Sponsors Section Start ===============================================================================-->
 <div class="pb-16" style="font-family: 'Lato', sans-serif">
     <dh-component>
         <div class="container mx-auto pt-16">
@@ -230,9 +227,10 @@
     <!-- Code block ends -->
     <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
 </div>
+<!-- ================= Sponsors Section End ===============================================================================-->
 
-<!--Sponsors section ends here-->
 
+<!-- ================= CTA Section Start ===============================================================================-->
 <section class="flex items-center bg-gray-100 font-poppins">
     <div class="justify-center flex-1 px-4 py-4 mx-auto lg:py-10 md:px-7">
         <div class="relative max-w-2xl mx-auto overflow-hidden rounded-3xl shadow bg-gray-50">
@@ -258,15 +256,10 @@
         </div>
     </div>
 </section>
+<!-- ================= CTA Section End ===============================================================================-->
 
 
-
-
-<!--CTA section ends here-->
-
-
-<!--Footer section starts here-->
-
+<!-- ================= Footer Section Start ===============================================================================-->
 <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
     <div class="border-t border-slate-900/5 py-10">
 
@@ -284,8 +277,10 @@
         </div>
     </div>
 </footer>
+<!-- ================= Footer Section End ===============================================================================-->
 
-<!--Footer section ends here-->
+
+<!-- ================= Scripts Start ===============================================================================-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
@@ -326,6 +321,8 @@
 
 
 </script>
+<!-- ================= Scripts End ===============================================================================-->
+
 
 </body>
 </html>
