@@ -28,30 +28,40 @@
         <div class="relative -mx-4 flex items-center justify-between">
             <div class="w-60 max-w-full px-4">
                 <a href="index.html" class="block w-full py-5">
-                    <img src="assets/images/logo/arclogo.png" alt="logo" class="w-30"/>
+                    <img
+                            src="assets/images/logo/arclogo.png"
+                            alt="logo"
+                            class="w-30"
+                    />
                 </a>
             </div>
             <div class="flex w-full items-center justify-between px-4">
                 <div>
                     <button
-                        @click="navbarOpen = !navbarOpen"
-                        :class="navbarOpen && 'navbarTogglerActive'"
-                        id="navbarToggler"
-                        class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                            @click="navbarOpen = !navbarOpen"
+                            :class="navbarOpen && 'navbarTogglerActive'"
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 lg:hidden bg-transparent text-white px-3 py-2 rounded-lg focus:outline-none"
+
                     >
                 <span
-                    class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                        class="block h-1 w-6 bg-white mb-1"
                 ></span>
                         <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                                class="block h-1 w-6 bg-white mb-1"
                         ></span>
                         <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                                class="block h-1 w-6 bg-white mb-1"
                         ></span>
                     </button>
                     <nav
-                            x-transition
-                            :class="!navbarOpen && 'hidden'"
+                            x-show="navbarOpen"
+                            x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="opacity-0 scale-90"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-300"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-90"
+                            :class="{'bg-[#81171b] text-black': navbarOpen, 'hidden': !navbarOpen}"
                             id="navbarCollapse"
                             class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
                     >
@@ -66,8 +76,8 @@
                             </li>
                             <li>
                                 <a
-                                    href="about.html"
-                                    class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="about.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Venue & Schedule
                                 </a>
@@ -75,8 +85,8 @@
 
                             <li>
                                 <a
-                                    href="speakers.html"
-                                    class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="speakers.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Speakers
                                 </a>
@@ -84,8 +94,8 @@
 
                             <li>
                                 <a
-                                    href="sponsors.html"
-                                    class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="sponsors.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Sponsors
                                 </a>
@@ -93,8 +103,8 @@
 
                             <li>
                                 <a
-                                href="code_of_conduct.html"
-                                class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="code_of_conduct.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Code of Conduct
                                 </a>
