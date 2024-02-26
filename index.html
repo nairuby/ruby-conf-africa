@@ -44,18 +44,18 @@
                             class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
                     >
                 <span
-                        class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                        class="block h-1 w-6 bg-white mb-1"
                 ></span>
                         <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                                class="block h-1 w-6 bg-white mb-1"
                         ></span>
                         <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                                class="block h-1 w-6 bg-white mb-1"
                         ></span>
                     </button>
                     <nav
                             x-transition
-                            :class="!navbarOpen && 'hidden'"
+                            :class="{ 'text-white': navbarOpen, 'text-black': !navbarOpen, 'hidden': !navbarOpen }"
                             id="navbarCollapse"
                             class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
                     >
