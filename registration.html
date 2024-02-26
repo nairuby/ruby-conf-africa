@@ -1,255 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <title> Ruby Conf Africa </title>
-    <link rel="icon" href="assets/images/logo/ruby.svg" type="image/x-icon">
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ruby Conf Africa</title>
+    <link rel="icon" href="assets/images/logo/ruby.svg" type="image/x-icon" />
 
     <!-- add resource links below -->
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="index.css" />
     <script defer src="assets/js/alpine.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-</head>
-<body>
-
-<header x-data="{navbarOpen: false,}" class="absolute left-0 top-0 z-50 w-full">
-
-    <!-- ================== menu section  start ======================================================================-->
-    <div class="container mx-auto">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <header
+      x-data="{navbarOpen: false,}"
+      class="absolute left-0 top-0 z-50 w-full"
+    >
+      <!-- ================== menu section  start ======================================================================-->
+      <div class="container mx-auto">
         <div class="relative -mx-4 flex items-center justify-between">
-            <div class="w-60 max-w-full px-4">
-                <a href="index.html" class="block w-full py-5">
-                    <img
-                            src="assets/images/logo/arclogo.png"
-                            alt="logo"
-                            class="w-30"
-                    />
-                </a>
-            </div>
-            <div class="flex w-full items-center justify-between px-4">
-                <div>
-                    <button
-                            @click="navbarOpen = !navbarOpen"
-                            :class="navbarOpen && 'navbarTogglerActive'"
-                            id="navbarToggler"
-                            class="absolute right-4 top-1/2 transform -translate-y-1/2 lg:hidden bg-transparent text-white px-3 py-2 rounded-lg focus:outline-none"
+          <div class="w-60 max-w-full px-4">
+            <a href="index.html" class="block w-full py-5">
+              <img
+                src="assets/images/logo/arclogo.png"
+                alt="logo"
+                class="w-30"
+              />
+            </a>
+          </div>
+          <div class="flex w-full items-center justify-between px-4">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen"
+                :class="navbarOpen && 'navbarTogglerActive'"
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 lg:hidden bg-transparent text-white px-3 py-2 rounded-lg focus:outline-none"
+              >
+                <span class="block h-1 w-6 bg-white mb-1"></span>
+                <span class="block h-1 w-6 bg-white mb-1"></span>
+                <span class="block h-1 w-6 bg-white mb-1"></span>
+              </button>
+              <nav
+                x-transition
+                :class="{'bg-[#81171b] text-black': navbarOpen, 'hidden': !navbarOpen}"
+                id="navbarCollapse"
+                class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
+              >
+                <ul class="block lg:flex gap-6 items-center">
+                  <li>
+                    <a
+                      href="index.html"
+                      class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="about.html"
+                      class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"
+                    >
+                      Venue & Schedule
+                    </a>
+                  </li>
 
+                  <li>
+                    <a
+                      href="speakers.html"
+                      class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"
                     >
-                <span
-                        class="block h-1 w-6 bg-white mb-1"
-                ></span>
-                        <span
-                                class="block h-1 w-6 bg-white mb-1"
-                        ></span>
-                        <span
-                                class="block h-1 w-6 bg-white mb-1"
-                        ></span>
-                    </button>
-                    <nav
-                            x-transition
-                            :class="{'bg-[#81171b] text-black': navbarOpen, 'hidden': !navbarOpen}"
-                            id="navbarCollapse"
-                            class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
+                      Speakers
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="sponsors.html"
+                      class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"
                     >
-                </div>
+                      Sponsors
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="code_of_conduct.html"
+                      class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"
+                    >
+                      Code of Conduct
+                    </a>
+                  </li>
+
+                </ul>
+              </nav>
             </div>
+          </div>
         </div>
+      </div>
+      <!-- ================== menu section end ======================================================================-->
+    </header>
+
+    <!-- ====================== Banner Section Start ======================================================================-->
+    <div
+      id="banner"
+      class="relative pt-[120px] pb-[10px] lg:pt-[10px] min-h-32 nav"
+    >
+      <div class="mx-auto max-w-2xl py-32 sm:py-28 lg:py-30">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-white">RUBY CONF AFRICA 2024</h1>
+
+          <p class="mt-6 text-2xl font-bold leading-8 text-white">
+            Nairobi - 26/27 July
+          </p>
+
+          <p class="mt-6 text-xl font-bold leading-8 text-white">
+            Theme: Agile, Open Source & Entrepreneurship
+          </p>
+        </div>
+      </div>
     </div>
-    <!-- ================== menu section end ======================================================================-->
+    <!-- ================= Banner Section End ================================================================================-->
 
-</header>
-
-
-<!-- ====================== Hero Section Start ======================================================================-->
-<div id="slider-1" class="relative pt-[120px] pb-[10px] lg:pt-[10px] min-h-32">
-    <div class="hero-overlay bg-opacity-60"></div>
-</div>
-<!-- ================= Hero Sectio End ================================================================================-->
-
-<!-- ================= Sponsors Section Start ===============================================================================-->
-<div class="pb-16" style="font-family: 'Lato', sans-serif">
-    <dh-component>
-
+    <!-- ================= Sponsors Section Start ===============================================================================-->
+    <div class="pb-16" style="font-family: 'Lato', sans-serif">
+      <dh-component>
         <div class="container mx-auto pt-16">
+          <!-- previous sponsors -->
+          <div
+            class="w-11/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16"
+          >
+            <h1
+              tabindex="0"
+              class="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4"
+            >
+              Previous Sponsors
+            </h1>
+          </div>
 
-            <!-- previous sponsors -->
-            <div class="w-11/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16">
-                <h1 tabindex="0"
-                    class="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4">
-                    Previous Sponsors
-                </h1>
+          <div class="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="assets/images/logo/shopify_2.png"
+                alt="Kwara"
+                role="img"
+                width="200"
+                height="200"
+              />
             </div>
 
-            <div class="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
-
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                        src="assets/images/logo/shopify_2.png" alt="Kwara" role="img"
-                        width="200" height="200"
-                    />
-                </div>
-
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                        src="https://finplusgroup.com/images/Finplus-logo-draft-p-500.png" alt="Finplus" role="img"
-                        width="200" height="200"
-                    />
-                </div> 
-
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                        src="assets/images/logo/andela.jpeg" alt="Andela" role="img"
-                        width="200" height="200"
-                    />
-                </div>
-
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                        src="assets/images/logo/nairobits_logo2.png" alt="Nairobits" role="img"
-                        width="200" height="200"
-                    />
-                </div> 
-
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                        src="assets/images/logo/kopokopo.png" alt="Kopokopo" role="img"
-                        width="200" height="200"
-                    />
-                </div>   
-
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                        src="assets/images/logo/kwara_logo.jpeg" alt="Kwara" role="img"
-                        width="200" height="200"
-                    />
-                </div> 
-
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="https://finplusgroup.com/images/Finplus-logo-draft-p-500.png"
+                alt="Finplus"
+                role="img"
+                width="200"
+                height="200"
+              />
             </div>
 
-            <!-- current sponsors -->
-            <div class="w-11/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16">
-                <h1 tabindex="0"
-                    class="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4">
-                    Current Sponsors
-                </h1>
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="assets/images/logo/andela.jpeg"
+                alt="Andela"
+                role="img"
+                width="200"
+                height="200"
+              />
             </div>
 
-            <div class="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
-                <div class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center">
-                    <img tabindex="0" class="focus:outline-none"
-                         src="https://finplusgroup.com/images/Finplus-logo-draft-p-500.png" alt="Finplus" role="img"
-                         width="200" height="200"/>
-                </div> 
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="assets/images/logo/nairobits_logo2.png"
+                alt="Nairobits"
+                role="img"
+                width="200"
+                height="200"
+              />
             </div>
 
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="assets/images/logo/kopokopo.png"
+                alt="Kopokopo"
+                role="img"
+                width="200"
+                height="200"
+              />
+            </div>
+
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="assets/images/logo/kwara_logo.jpeg"
+                alt="Kwara"
+                role="img"
+                width="200"
+                height="200"
+              />
+            </div>
+          </div>
+
+          <!-- current sponsors -->
+          <div
+            class="w-11/12 xl:w-2/3 lg:w-2/3 md:w-2/3 mx-auto sm:mb-10 mb-16"
+          >
+            <h1
+              tabindex="0"
+              class="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4"
+            >
+              Current Sponsors
+            </h1>
+          </div>
+
+          <div class="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
+            <div
+              class="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pb-10 pb-16 items-center"
+            >
+              <img
+                tabindex="0"
+                class="focus:outline-none"
+                src="https://finplusgroup.com/images/Finplus-logo-draft-p-500.png"
+                alt="Finplus"
+                role="img"
+                width="200"
+                height="200"
+              />
+            </div>
+          </div>
         </div>
-
-    </dh-component>
-</div>
-<!-- ================= Sponsors Section End ===============================================================================-->
-
-<!-- ================= CTA Section Start ===============================================================================-->
-<section class="flex items-center bg-gray-100 font-poppins">
-    <div class="justify-center flex-1 px-4 py-4 mx-auto lg:py-10 md:px-7">
-        <div class="relative max-w-2xl mx-auto overflow-hidden rounded-3xl shadow bg-gray-50">
-
-            <div class="z-20 lg:w-1/3 lg:text-start sm:px-6 lg:py-10 lg:px-8 lg:border-r-4 lg:border-gray-400">
-                <h2 class="text-xl font-bold md:text-2xl text-center dark:text-gray-800">
-                    JUL
-                </h2>
-                <h2 class="mb-6 text-xl font-bold md:text-2xl text-center dark:text-gray-800">
-                    26th & 27th
-                </h2>
-            </div>
-
-            <div class="lg:absolute top-0 lg:right-0 lg:w-2/3 lg:h-full lg:p-4 flex flex-col justify-center">
-                <p class="dark:text-gray-800 text-center lg:text-start">Join 400 others in Nairobi, KE for a full day of inspiring keynotes and new connections at the premier conference for software Product Managers.</p>
-
-                <a href="registration.html"
-                   class="mt-4 inline-flex items-center justify-center rounded-lg bg-[#81171b] py-4 w-full px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10">
-                    Grab Your Ticket
-                </a>
-            </div>
-
-        </div>
+      </dh-component>
     </div>
-</section>
-<!-- ================= CTA Section End ===============================================================================-->
+    <!-- ================= Sponsors Section End ===============================================================================-->
 
+    <!-- ================= CTA Section Start ===============================================================================-->
+    <section class="flex items-center bg-gray-100 font-poppins">
+      <div class="justify-center flex-1 px-4 py-4 mx-auto lg:py-10 md:px-7">
+        <div
+          class="relative max-w-2xl mx-auto overflow-hidden rounded-3xl shadow bg-gray-50"
+        >
+          <div
+            class="z-20 lg:w-1/3 lg:text-start sm:px-6 lg:py-10 lg:px-8 lg:border-r-4 lg:border-gray-400"
+          >
+            <h2
+              class="text-xl font-bold md:text-2xl text-center dark:text-gray-800"
+            >
+              JUL
+            </h2>
+            <h2
+              class="mb-6 text-xl font-bold md:text-2xl text-center dark:text-gray-800"
+            >
+              26th & 27th
+            </h2>
+          </div>
 
-<!-- ================= Footer Section Start ===============================================================================-->
-<footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
-    <div class="border-t border-slate-900/5 py-10">
+          <div
+            class="lg:absolute top-0 lg:right-0 lg:w-2/3 lg:h-full lg:p-4 flex flex-col justify-center"
+          >
+            <p class="dark:text-gray-800 text-center lg:text-start">
+              Join 400 others in Nairobi, KE for a full day of inspiring
+              keynotes and new connections at the premier conference for
+              software Product Managers.
+            </p>
 
-        <img tabindex="0" class="mx-auto h-8 w-auto"
-             src="assets/images/logo/arc_logo_coloured.png"
-             alt="Finplus" role="img" width="250" height="250"/>
-
-
-        <p class="mt-5 text-center text-sm leading-6 text-slate-500">© 2024 Africa Ruby Community. All rights
-            reserved.</p>
-        <div class="mt-8 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-slate-700"><a
-                href="/privacy-policy">Privacy policy</a>
-            <div class="h-4 w-px bg-slate-500/20"></div>
-            <a href="/terms">Terms & Conditions</a>
+            <a
+              href="registration.html"
+              class="mt-4 inline-flex items-center justify-center rounded-lg bg-[#81171b] py-4 w-full px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10"
+            >
+              Grab Your Ticket
+            </a>
+          </div>
         </div>
-    </div>
-</footer>
-<!-- ================= Footer Section End ===============================================================================-->
+      </div>
+    </section>
+    <!-- ================= CTA Section End ===============================================================================-->
 
+    <!-- ================= Footer Section Start ===============================================================================-->
+    <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-slate-900/5 py-10">
+        <img
+          tabindex="0"
+          class="mx-auto h-8 w-auto"
+          src="assets/images/logo/arc_logo_coloured.png"
+          alt="Finplus"
+          role="img"
+          width="250"
+          height="250"
+        />
 
-<!-- ================= Scripts Start ===============================================================================-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<script src="index.js"></script>
-<script>
-    const dropdownToggle = document.getElementById('dropdown-toggle');
-    const dropdownContent = document.getElementById('dropdown-content');
+        <p class="mt-5 text-center text-sm leading-6 text-slate-500">
+          © 2024 Africa Ruby Community. All rights reserved.
+        </p>
+        <div
+          class="mt-8 flex items-center justify-center space-x-4 text-sm font-semibold leading-6 text-slate-700"
+        >
+          <a href="/privacy-policy">Privacy policy</a>
+          <div class="h-4 w-px bg-slate-500/20"></div>
+          <a href="/terms">Terms & Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= Footer Section End ===============================================================================-->
 
-    const dropdownToggleCity = document.getElementById('dropdown-toggle-cities');
-    const dropdownContentCity = document.getElementById('dropdown-content-cities');
+    <!-- ================= Scripts Start ===============================================================================-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="index.js"></script>
+    <script>
+      const dropdownToggle = document.getElementById("dropdown-toggle");
+      const dropdownContent = document.getElementById("dropdown-content");
 
-    const dropdownToggleArea = document.getElementById('dropdown-toggle-areas');
-    const dropdownContentArea = document.getElementById('dropdown-content-areas');
+      const dropdownToggleCity = document.getElementById(
+        "dropdown-toggle-cities"
+      );
+      const dropdownContentCity = document.getElementById(
+        "dropdown-content-cities"
+      );
 
+      const dropdownToggleArea = document.getElementById(
+        "dropdown-toggle-areas"
+      );
+      const dropdownContentArea = document.getElementById(
+        "dropdown-content-areas"
+      );
 
-    dropdownToggle.addEventListener('click', () => {
-        if (dropdownContent.classList.contains('hidden')) {
-            dropdownContent.classList.remove('hidden');
+      dropdownToggle.addEventListener("click", () => {
+        if (dropdownContent.classList.contains("hidden")) {
+          dropdownContent.classList.remove("hidden");
         } else {
-            dropdownContent.classList.add('hidden');
+          dropdownContent.classList.add("hidden");
         }
-    });
-    dropdownToggleCity.addEventListener('click', () => {
-        if (dropdownContentCity.classList.contains('hidden')) {
-            dropdownContentCity.classList.remove('hidden');
+      });
+      dropdownToggleCity.addEventListener("click", () => {
+        if (dropdownContentCity.classList.contains("hidden")) {
+          dropdownContentCity.classList.remove("hidden");
         } else {
-            dropdownContentCity.classList.add('hidden');
+          dropdownContentCity.classList.add("hidden");
         }
-    });
-    dropdownToggleArea.addEventListener('click', () => {
-        if (dropdownContentArea.classList.contains('hidden')) {
-            dropdownContentArea.classList.remove('hidden');
+      });
+      dropdownToggleArea.addEventListener("click", () => {
+        if (dropdownContentArea.classList.contains("hidden")) {
+          dropdownContentArea.classList.remove("hidden");
         } else {
-            dropdownContentArea.classList.add('hidden');
+          dropdownContentArea.classList.add("hidden");
         }
-    });
-
-
-</script>
-<!-- ================= Scripts End ===============================================================================-->
-
-
-</body>
+      });
+    </script>
+    <!-- ================= Scripts End ===============================================================================-->
+  </body>
 </html>
