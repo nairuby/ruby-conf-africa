@@ -23,92 +23,55 @@
 
 <header x-data="{navbarOpen: false,}" class="absolute left-0 top-0 z-50 w-full">
 
-    <!-- ================== menu section  start ======================================================================-->
-    <div class="container mx-auto">
-        <div class="relative -mx-4 flex items-center justify-between">
-            <div class="w-60 max-w-full px-4">
-                <a href="index.html" class="block w-full py-5">
-                    <img
-                            src="assets/images/logo/arclogo.png"
-                            alt="logo"
-                            class="w-30"
-                    />
-                </a>
-            </div>
-            <div class="flex w-full items-center justify-between px-4">
-                <div>
-                    <button
-                            @click="navbarOpen = !navbarOpen"
-                            :class="navbarOpen && 'navbarTogglerActive'"
-                            id="navbarToggler"
-                            class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
-                    >
-                <span
-                        class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
-                ></span>
-                        <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
-                        ></span>
-                        <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
-                        ></span>
-                    </button>
-                    <nav
-                            x-transition
-                            :class="!navbarOpen && 'hidden'"
-                            id="navbarCollapse"
-                            class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
-                    >
-                        <ul class="block lg:flex">
-                            <li>
-                                <a
-                                        href="index.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="about.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Venue & Schedule
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                        href="speakers.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Speakers
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                        href="sponsors.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Sponsors
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                        href="code_of_conduct.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Code of Conduct
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+   <!-- ================== menu section  start ======================================================================-->
+<div class="container mx-auto">
+    <div class="relative -mx-4 flex w-full items-center justify-between">
+      <div class="Logo w-60 max-w-full px-4">
+        <a href="index.html" class="block w-full py-5">
+          <img src="assets/images/logo/arclogo.png" alt="logo" class="w-30" />
+        </a>
+      </div>
+      <div class="Navbar inline-flex w-full items-center px-4">
+        <div class="item-center ml-auto">
+          <button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive'" id="navbarToggler" class="ring-primary absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden">
+            <span class="bg-body-color relative my-[6px] block h-[2px] w-[30px]"></span>
+            <span class="bg-body-color relative my-[6px] block h-[2px] w-[30px]"></span>
+            <span class="bg-body-color relative my-[6px] block h-[2px] w-[30px]"></span>
+          </button>
+          <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse" class="absolute right-4 top-full w-full  rounded-lg px-6 py-5 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none">
+            <ul class="block lg:flex gap-6 items-center">
+              <li>
+                <a href="index.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Home </a>
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Venue & Schedule </a>
+              </li>
+  
+              <li>
+                <a href="speakers.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Speakers </a>
+              </li>
+  
+              <li>
+                <a href="sponsors.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Sponsors </a>
+              </li>
+  
+              <li>
+                <a href="code_of_conduct.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Code of Conduct </a>
+              </li>
+  
+              <a data-aos="fade-left" data-aos-delay="600" data-aos-duration="2000" href="registration.html" class="rounded-lg bg-[#343a40] px-3 py-4 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-6 lg:px-4 xl:px-6"> Contact Organizer </a>
+            </ul>
+  
+            
+  
+           
+          </nav>
+          
         </div>
+      </div>
     </div>
+  </div>
+  
     <!-- ================== menu section end ======================================================================-->
 
 </header>
