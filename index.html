@@ -23,6 +23,7 @@
 
 <header x-data="{navbarOpen: false,}" class="absolute left-0 top-0 z-50 w-full">
 
+
     <!-- ================== menu section  start ======================================================================-->
     <div class="container mx-auto">
         <div class="relative -mx-4 flex items-center justify-between">
@@ -53,62 +54,42 @@
                                 class="block h-1 w-6 bg-white mb-1"
                         ></span>
                     </button>
-                    <nav
-                            x-transition
-                            :class="{ 'text-white': navbarOpen, 'text-black': !navbarOpen, 'hidden': !navbarOpen }"
-                            id="navbarCollapse"
-                            class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
-                    >
-                        <ul class="block lg:flex">
-                            <li>
-                                <a
-                                        href="index.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="about.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Venue & Schedule
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                        href="speakers.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Speakers
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                        href="sponsors.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Sponsors
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                        href="code_of_conduct.html"
-                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
-                                >
-                                    Code of Conduct
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <nav x-transition :class="!navbarOpen && 'hidden'" id="navbarCollapse" class="absolute right-4 top-full w-full  rounded-lg px-6 py-5 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none">
+            <ul class="block lg:flex gap-6 items-center">
+              <li>
+                <a href="index.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Home </a>
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Venue & Schedule </a>
+              </li>
+  
+              <li>
+                <a href="speakers.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Speakers </a>
+              </li>
+  
+              <li>
+                <a href="sponsors.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Sponsors </a>
+              </li>
+  
+              <li>
+                <a href="code_of_conduct.html" class="hover:text-primary flex py-2 text-base font-bold text-white lg:inline-flex"> Code of Conduct </a>
+              </li>
+  
+              <a data-aos="fade-left" data-aos-delay="600" data-aos-duration="2000" href="registration.html" class="rounded-lg bg-[#343a40] px-3 py-4 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-6 lg:px-4 xl:px-6"> Contact Organizer </a>
+            </ul>
+  
+            
+  
+           
+          </nav>
                 </div>
             </div>
+
         </div>
+      </div>
     </div>
+  </div>
+  
     <!-- ================== menu section end ======================================================================-->
 
 </header>
