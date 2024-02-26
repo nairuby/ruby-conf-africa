@@ -34,3 +34,9 @@ body{
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+}
