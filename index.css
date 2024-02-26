@@ -15,28 +15,80 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(123, 25, 25, 0.63)
-;
-}
-
-#slider-2 {
-    position: relative;
-    background-image: url('assets/images/about/coro4.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#slider-2 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(123, 25, 25, 0.63);
 }
 
 .active {
     font-weight: bold;
     text-decoration: underline;
     text-decoration-thickness: 0.2em;
+}
+
+.hero-btn {
+    background: linear-gradient(
+            -45deg,
+            #7c1000,
+            #ff4605,
+            rgba(234, 66, 66, 0.76),
+            rgba(255, 0, 0, 0.6),
+            #d3312e,
+            #ea0000,
+            #50010a
+    );
+}
+.bg-blur::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.nav {
+    color: white;
+    background: linear-gradient(
+            -45deg,
+            #7c1000,
+            #ff4605,
+            rgba(234, 66, 66, 0.76),
+            rgba(255, 0, 0, 0.6),
+            #d3312e,
+            #ea0000,
+            #50010a
+    );
+    background-size: 400% 400%;
+    animation: backgroundChange1 30s ease infinite;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.cta, #banner {
+    color: white;
+    background: linear-gradient(
+            -45deg,
+            #7c1000,
+            #ff4605,
+            rgba(234, 66, 66, 0.76),
+            rgba(255, 0, 0, 0.6),
+            #d3312e,
+            #ea0000,
+            #50010a
+    );
+    background-size: 400% 400%;
+    animation: backgroundChange1 20s ease infinite;
+}
+
+@keyframes backgroundChange1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
