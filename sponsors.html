@@ -28,30 +28,34 @@
         <div class="relative -mx-4 flex items-center justify-between">
             <div class="w-60 max-w-full px-4">
                 <a href="index.html" class="block w-full py-5">
-                    <img src="assets/images/logo/arclogo.png" alt="logo" class="w-30"/>
+                    <img
+                            src="assets/images/logo/arclogo.png"
+                            alt="logo"
+                            class="w-30"
+                    />
                 </a>
             </div>
             <div class="flex w-full items-center justify-between px-4">
                 <div>
                     <button
-                        @click="navbarOpen = !navbarOpen"
-                        :class="navbarOpen && 'navbarTogglerActive'"
-                        id="navbarToggler"
-                        class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                            @click="navbarOpen = !navbarOpen"
+                            :class="navbarOpen && 'navbarTogglerActive'"
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 lg:hidden bg-transparent text-white px-3 py-2 rounded-lg focus:outline-none"
+
                     >
                 <span
-                    class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                        class="block h-1 w-6 bg-white mb-1"
                 ></span>
                         <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                                class="block h-1 w-6 bg-white mb-1"
                         ></span>
                         <span
-                                class="relative my-[6px] block h-[2px] w-[30px] bg-body-color"
+                                class="block h-1 w-6 bg-white mb-1"
                         ></span>
                     </button>
                     <nav
                             x-transition
-                            :class="!navbarOpen && 'hidden'"
+                            :class="{'bg-[#81171b] text-black': navbarOpen, 'hidden': !navbarOpen}"
                             id="navbarCollapse"
                             class="absolute right-4 top-full w-full max-w-[250px] rounded-lg py-5 px-6 shadow transition-all lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none"
                     >
@@ -66,8 +70,8 @@
                             </li>
                             <li>
                                 <a
-                                    href="about.html"
-                                    class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="about.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Venue & Schedule
                                 </a>
@@ -75,8 +79,8 @@
 
                             <li>
                                 <a
-                                    href="speakers.html"
-                                    class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="speakers.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Speakers
                                 </a>
@@ -84,8 +88,8 @@
 
                             <li>
                                 <a
-                                    href="sponsors.html"
-                                    class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="sponsors.html"
+                                        class="active flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Sponsors
                                 </a>
@@ -93,8 +97,8 @@
 
                             <li>
                                 <a
-                                href="code_of_conduct.html"
-                                class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
+                                        href="code_of_conduct.html"
+                                        class="flex py-2 text-base font-bold text-white hover:text-primary lg:ml-12 lg:inline-flex"
                                 >
                                     Code of Conduct
                                 </a>
@@ -110,49 +114,20 @@
 </header>
 
 
-<!-- ====================== Hero Section Start ======================================================================-->
-<div id="slider-1" class="relative pt-[120px] pb-[110px] lg:pt-[150px] min-h-40 max-h-screen">
-    <div class="hero-overlay bg-opacity-60"></div>
-    <div class="container mx-auto">
-        <div class="relative isolate px-6 pt-14 lg:px-8">
+<!-- ====================== Banner Section Start ======================================================================-->
+<div id="banner" class="relative pt-[120px] pb-[10px] lg:pt-[10px] min-h-32 nav">
+    <div class="mx-auto max-w-2xl py-32 sm:py-28 lg:py-30">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-white">RUBY CONF AFRICA 2024</h1>
 
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                
-                <!-- add gradient to website background -->
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                     style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
+            <p class="mt-6 text-2xl font-bold leading-8 text-white">Nairobi - 26/27 July</p>
 
-            </div>
-
-            <div >
-
-                <div class="text-center">
-
-                    <h1 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000"
-                        class="text-2xl font-bold tracking-tight text-white sm:text-6xl">RUBYCONF AFRICA 2024</h1>
-
-                    <h5 data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
-                       class="mt-6 text-lg font-bold leading-8 text-white">Theme: Agile, Open Source &
-                        Entrepreneurship
-                    </h5>
-
-                    <div class="mx-auto max-w-2xl py-16 sm:py-16 lg:py-10">
-                        <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
-                        class="mt-6 text-lg leading-8 text-white">
-                            Our conference owes its success to sponsors who prioritize integrity while supporting Ruby Conference Africa. We extend our heartfelt appreciation to these partners for their invaluable contribution to our community.
-                        </p>
-                    </div>
-                    
-                    
-                </div>
-
-            </div>
+            <p class="mt-6 text-xl font-bold leading-8 text-white">Theme: Agile, Open Source & Entrepreneurship</p>
 
         </div>
     </div>
 </div>
-<!-- ================= Hero Section End ================================================================================-->
+<!-- ================= Banner Section End ================================================================================-->
 
 
 <!-- ================= Sponsors Section Start ===============================================================================-->
@@ -243,19 +218,19 @@
 <!-- ================= CTA Section Start ===============================================================================-->
 <section class="flex items-center bg-gray-100 font-poppins">
     <div class="justify-center flex-1 px-4 py-4 mx-auto lg:py-10 md:px-7">
-        <div class="relative max-w-2xl mx-auto overflow-hidden rounded-3xl shadow bg-gray-50">
+        <div class="relative max-w-2xl mx-auto overflow-hidden rounded-3xl shadow cta">
 
             <div class="z-20 lg:w-1/3 lg:text-start sm:px-6 lg:py-10 lg:px-8 lg:border-r-4 lg:border-gray-400">
-                <h2 class="text-xl font-bold md:text-2xl text-center dark:text-gray-800">
+                <h2 class="text-xl font-bold md:text-2xl text-center text-white">
                     JUL
                 </h2>
-                <h2 class="mb-6 text-xl font-bold md:text-2xl text-center dark:text-gray-800">
+                <h2 class="mb-6 text-xl font-bold md:text-2xl text-center text-white">
                     26th & 27th
                 </h2>
             </div>
 
             <div class="lg:absolute top-0 lg:right-0 lg:w-2/3 lg:h-full lg:p-4 flex flex-col justify-center">
-                <p class="dark:text-gray-800 text-center lg:text-start">Join 400 others in Nairobi, KE for a full day of inspiring keynotes and new connections at the premier conference for software Product Managers.</p>
+                <p class="text-white text-center lg:text-start">Join 400 others in Nairobi, KE for a full day of inspiring keynotes and new connections at the premier conference for software Product Managers.</p>
 
                 <a href="registration.html"
                    class="mt-4 inline-flex items-center justify-center rounded-lg bg-[#81171b] py-4 w-full px-6 text-center text-base font-normal text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10">
